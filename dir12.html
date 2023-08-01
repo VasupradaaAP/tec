@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+table{
+
+    border:none;
+}
+td{
+    border:none;
+}
+td a{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+p a{
+    text-decoration: none;
+    margin-left: 100px;
+    color: black;
+    font-size: 35px;
+}
+#contentContainer {
+    display: flex;
+    align-items: center;
+}
+
+iframe {
+    display: none;
+    width: 700px;
+    height: 500px;
+    border: 2px solid black;
+    margin-left: 950px;
+    margin-top: -650px;
+    border-radius: 10px;
+}
+
+</style>
+</head> 
+
+<body>
+    <!-- <br><table border="1px" cellspacing=10px cellpadding=15px>
+    <tr><h2>
+        <td><a href="#C1">SKILLRACK</a></td>
+        <td><a href="#C2">LEETCODE</a></td>
+        <td><a href="#C3">HACKERRANK</a></td>
+        <td><a href="#C4">HACKEREARTH</a></td>
+        <td><a href="#C5">GEEKS FOR GEEKS</a></td>
+        <td><a href="#C6">CODE FORCES</a></td>
+        <td><a href="#C7">CODECHEF</a></td>
+    </h2></tr>
+        <tr><h2>
+        <td><a href="#C8">TOPCODER</a></td>
+        <td><a href="#C9">CODERBYTE</a></td>
+        <td><a href="#C10">CODEWARS</a></td>
+        <td><a href="#C11">FREE CODE CAMP</a></td>
+        <td><a href="#C12">CODE IN GAME</a></td>
+        <td><a href="#C13">BEECROWD</a></td>
+        <td><a href="#C14">MACHINE HACK</a></td>
+
+    </h2></tr>
+</table>-->
+<br><br>
+    <p id="C1"><a href="https://www.barc.gov.in/">Bhabha Atomic Research Centre</a></p>
+    <p id="C2"><a href="https://www.ntpc.co.in/">National Thermal Power Corporation</a></p>
+    <p id="C3"><a href="https://iocl.com/">Indian Oil Corporation Limited </a></p>
+    <p id="C4"><a href="https://etenders.ecil.co.in/eps/home.do">Electronics Corporation of India Limited</a></p>
+    <p id="C5"><a href="https://www.nationalfertilizers.com/">National Fertilizers Limited</a></p>
+    <p id="C6"><a href="https://www.drdo.gov.in/">Defence Research and Development Organisation</a></p>
+    <p id="C7"><a href="https://www.nlcindia.in/new_website/index.htm">NLC India Limited</a></p>
+    <p id="C8"><a href="https://ongcindia.com/">Oil and Natural Gas Corporation</a></p>
+    <p id="C9"><a href="https://www.nic.in/">National Informatics Centre</a></p>
+    <p id="C10"><a href="https://www.gailonline.com/">Gas Authority of India Limited</a></p>
+    <p id="C11"><a href="https://sail.co.in/en/home">Steel Authority of India Limited</a></p>
+    <p id="C12"><a href="https://posoco.in/">Power System Operation Corporation</a></p>
+    <p id="C13"><a href="https://www.powergrid.in/">Powergrid Corporation of India Limited</a></p>
+    <p id="C14"><a href="https://npcil.nic.in/index.aspx">Nuclear Power Corporation of India Limited</a></p>
+
+    <iframe id="contentFrame"> </iframe>
+
+    <script>
+        // Function to show content in iframe based on title hover
+        function showContent(title) {
+            var iframe = document.getElementById('contentFrame');
+            iframe.style.display = 'block';
+
+            // Mapping titles to their content
+            var contentMap = {
+    'C1': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">BARC has active groups for research and development in reactor technologies, Fuel reprocessing and waste management, isotope applications, radiation technologies and their application to health, agriculture and environment, accelerator and laser technology, reactor control and material Science.</h1>',
+    'C2': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">The company is committed to generating reliable power at competitive prices in a sustainable manner by optimising the use of multiple energy sources with innovative eco-friendly technologies.</h1>',
+    'C3': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Indian Oil business interests overlap the entire hydrocarbon value chain, including refining, Pipeline, marketing of petroleum products, exploration and production of Petroleum, natural gas and petrochemicals.</h1>',
+    'C4': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">ECIL is a multi-product, multi disciplinary organisation with focus on indigenous Nuclear energy, space and Defence sectors.</h1>',
+    'C5': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">The company is engaged in manufacturing of Ammonia based Industrial products namely Nitric Acid, Ammonium Nitrate, Sodium Nitrate and Nitrite at its Nangal Unit.</h1>',
+    'C6': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">DRDO is the R&D wing of Ministry of Defence, Govt of India, with a vision to empower India with cutting-edge defence technologies and a mission to achieve self-reliance in critical defence technologies and systems.</h1>',
+    'C7': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">NLC is a Government of India Enterprise, is a mining and power generation company. It operates opencast lignite mines; produces electricity using the lignite, coal and from renewable sources such as wind and solar sources.</h1>',
+    'C8': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">ONGC is the largest crude oil and natural gas Company in India. It produce petroleum products like Petrol, Diesel, Kerosene, Naphtha, and Cooking Gas LPG.</h1>',
+    'C9': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">The NIC provides infrastructure, IT Consultancy, IT Services including but not limited to architecture, design, development and implementation of IT Systems to Central Government Departments and State Governments thus enabling delivery of government services to Citizens and pioneering the initiatives of Digital India.</h1>',
+    'C10': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">GAIL is India leading natural gas company with diversified interests across the natural gas value chain of trading, transmission, LPG production & transmission, LNG re-gasification, petrochemicals, city gas, E&P, etc.</h1>',
+    'C11': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">It is under the ownership of the Ministry of Steel. One of the largest steel producers in India. SAIL manufactures and sells a broad range of steel products and produces iron and steel at five integrated plants and three special steel plants.</h1>',
+    'C12': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">The company ensure Integrated Operation of the Indian Power System to facilitate transfer of electric power within and across the regions.</h1>',
+    'C13': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Power grid is engaged mainly in transmission of bulk power across different states of India. It is public sector undertaking under the ownership of the Ministry of Power.</h1>',
+    'C14': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">NPCIL is responsible for design, construction, commissioning and operation of nuclear power reactors. NPCIL is a MoU signing, profit making and dividend paying.</h1>'
+
+
+};
+        iframe.contentDocument.body.innerHTML = contentMap[title];
+        }
+
+        
+        function hideContent() {
+            var iframe = document.getElementById('contentFrame');
+            iframe.style.display = 'none';
+        }
+
+       
+        document.getElementById('C1').addEventListener('mouseover', function() {
+            showContent('C1');
+        });
+        document.getElementById('C2').addEventListener('mouseover', function() {
+            showContent('C2');
+        });
+        document.getElementById('C3').addEventListener('mouseover', function() {
+            showContent('C3');
+        });
+        document.getElementById('C4').addEventListener('mouseover', function() {
+            showContent('C4');
+        });
+        document.getElementById('C5').addEventListener('mouseover', function() {
+            showContent('C5');
+        });
+        document.getElementById('C6').addEventListener('mouseover', function() {
+            showContent('C6');
+        });
+        document.getElementById('C7').addEventListener('mouseover', function() {
+            showContent('C7');
+        });
+        document.getElementById('C8').addEventListener('mouseover', function() {
+            showContent('C8');
+        });
+        document.getElementById('C9').addEventListener('mouseover', function() {
+            showContent('C9');
+        });
+        document.getElementById('C10').addEventListener('mouseover', function() {
+            showContent('C10');
+        });
+        document.getElementById('C11').addEventListener('mouseover', function() {
+            showContent('C11');
+        });
+        document.getElementById('C12').addEventListener('mouseover', function() {
+            showContent('C12');
+        });
+        document.getElementById('C13').addEventListener('mouseover', function() {
+            showContent('C13');
+        });
+        document.getElementById('C14').addEventListener('mouseover', function() {
+            showContent('C14');
+        });
+        
+        document.body.addEventListener('mouseover', function(event) {
+            if (!event.target.matches('p a')) {
+                hideContent();
+            }
+        });
+    </script>
+
+</body>
+</html>

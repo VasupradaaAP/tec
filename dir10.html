@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+table{
+
+    border:none;
+}
+td{
+    border:none;
+}
+td a{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+p a{
+    text-decoration: none;
+    margin-left: 100px;
+    color: black;
+    font-size: 35px;
+}
+#contentContainer {
+    display: flex;
+    align-items: center;
+}
+
+iframe {
+    display: none;
+    width: 700px;
+    height: 500px;
+    border: 2px solid black;
+    margin-left: 700px;
+    margin-top: -700px;
+    border-radius: 10px;
+}
+
+</style>
+</head> 
+
+<body>
+    <!-- <br><table border="1px" cellspacing=10px cellpadding=15px>
+    <tr><h2>
+        <td><a href="#C1">SKILLRACK</a></td>
+        <td><a href="#C2">LEETCODE</a></td>
+        <td><a href="#C3">HACKERRANK</a></td>
+        <td><a href="#C4">HACKEREARTH</a></td>
+        <td><a href="#C5">GEEKS FOR GEEKS</a></td>
+        <td><a href="#C6">CODE FORCES</a></td>
+        <td><a href="#C7">CODECHEF</a></td>
+    </h2></tr>
+        <tr><h2>
+        <td><a href="#C8">TOPCODER</a></td>
+        <td><a href="#C9">CODERBYTE</a></td>
+        <td><a href="#C10">CODEWARS</a></td>
+        <td><a href="#C11">FREE CODE CAMP</a></td>
+        <td><a href="#C12">CODE IN GAME</a></td>
+        <td><a href="#C13">BEECROWD</a></td>
+        <td><a href="#C14">MACHINE HACK</a></td>
+
+    </h2></tr>
+</table>-->
+<br><br>
+    <p id="C1"><a href="https://www.zohocorp.com/">zoho</a></p>
+    <p id="C2"><a href="https://www.infosys.com/">infosys</a></p>
+    <p id="C3"><a href="https://www.tcs.com/">TCS</a></p>
+    <p id="C4"><a href="https://www.cognizant.com/in/en">cognizant</a></p>
+    <p id="C5"><a href="https://www.wipro.com/">wipro</a></p>
+    <p id="C6"><a href="https://www.kpit.com/">KPIT</a></p>
+    <p id="C7"><a href="https://www.kaartech.com/">kaar</a></p>
+    <p id="C8"><a href="https://www.virtusa.com/">virtusa</a></p>
+    <p id="C9"><a href="https://www.hcltech.com/">HCL</a></p>
+    <p id="C10"><a href="https://www.larsentoubro.com/">L&T</a></p>
+    <p id="C11"><a href="https://www.mrcooper.com/">Mr. Cooper</a></p>
+    <p id="C12"><a href="https://www.accenture.com/in-en">accenture</a></p>
+    <p id="C13"><a href="https://embedur.com/">embedur</a></p>
+    <p id="C14"><a href="https://bosonmotors.com/">boson motors</a></p>
+
+
+    <iframe id="contentFrame"> </iframe>
+
+    <script>
+        // Function to show content in iframe based on title hover
+        function showContent(title) {
+            var iframe = document.getElementById('contentFrame');
+            iframe.style.display = 'block';
+
+            // Mapping titles to their content
+            var contentMap = {
+    'C1': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Zoho Corporation is an Indian multinational technology company that makes computer software and web-based business tools. It is best known for the online office suite offering Zoho Office Suite.</h1>',
+    'C2': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Infosys Limited is an Indian multinational information technology company that provides business consulting, information technology and outsourcing services. </h1>',
+    'C3': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Tata Consultancy Services is an Indian multinational IT outsourcing company and subsidiary of Tata Group. With more than 600,000 employees across 150 locations and 46 countries, TCS is the second largest company in India by market capitalization and eighth by revenue.</h1>',
+    'C4': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Cognizant is an American multinational information technology services and consulting company. Company unique industry-based, consultative approach helps clients envision, build and run more innovative and efficient businesses.</h1>',
+    'C5': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">It is one of the leading Big Tech companies. Wipro capabilities range across cloud computing, computer security, digital transformation, artificial intelligence, robotics, data analytics, and other technology consulting services to customers in 167 countries.</h1>',
+    'C6': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">KPIT Technologies Limited is an Indian multinational corporation which provides embedded software and product engineering services to automotive companies. It provides embedded software and product engineering services to automotive companies.</h1>',
+    'C7': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Kaar Technologies is a global consulting firm focused at designing, delivering and deploying the finest ideas and SAP expertise to empower companies.</h1>',
+    'C8': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Virtusa capabilities range across digital transformation, artificial intelligence, cloud computing, robotics, data analytics, and other technology consulting services to customers in 25+ countries in 50+ locations around the globe.</h1>',
+    'C9': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">HCL is a multinational IT company started in India. The company head office is located in Noida. A company which was a contributor to the development and growth of the IT and computer industry in India. </h1>',
+    'C10': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Larsen & Toubro Ltd, commonly known as L&T, is an Indian multinational conglomerate company, with business interests in engineering, construction, manufacturing, technology, information technology and financial services, headquartered in Mumbai.</h1>',
+    'C11': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Mr. Cooper is one of the largest home loan servicers in the country focused on delivering a variety of servicing and lending products, services and technologies. Xome provides technology and data enhanced solutions to homebuyers, home sellers, real estate agents and mortgage companies.</h1>',
+    'C12': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Accenture is a leading global professional services company that helps the worlds leading businesses, governments and other organizations build their digital core, optimize their operations, accelerate revenue growth and enhance citizen services</h1>',
+    'C13': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">The company specialize in Wi-Fi, Access and IoT Platform Enablement. Our embedded systems experts can lower your R&D risk and accelerate your time to market.</h1>',
+    'C14': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Boson Motors has reinvented todays light utility vehicle for tomorrow. A custom-built lithium iron phosphate battery outperforms lead acid batteries with a longer lifespan, improved safety, low maintenance, and better charge.</h1>'
+
+
+};
+        iframe.contentDocument.body.innerHTML = contentMap[title];
+        }
+
+        
+        function hideContent() {
+            var iframe = document.getElementById('contentFrame');
+            iframe.style.display = 'none';
+        }
+
+       
+        document.getElementById('C1').addEventListener('mouseover', function() {
+            showContent('C1');
+        });
+        document.getElementById('C2').addEventListener('mouseover', function() {
+            showContent('C2');
+        });
+        document.getElementById('C3').addEventListener('mouseover', function() {
+            showContent('C3');
+        });
+        document.getElementById('C4').addEventListener('mouseover', function() {
+            showContent('C4');
+        });
+        document.getElementById('C5').addEventListener('mouseover', function() {
+            showContent('C5');
+        });
+        document.getElementById('C6').addEventListener('mouseover', function() {
+            showContent('C6');
+        });
+        document.getElementById('C7').addEventListener('mouseover', function() {
+            showContent('C7');
+        });
+        document.getElementById('C8').addEventListener('mouseover', function() {
+            showContent('C8');
+        });
+        document.getElementById('C9').addEventListener('mouseover', function() {
+            showContent('C9');
+        });
+        document.getElementById('C10').addEventListener('mouseover', function() {
+            showContent('C10');
+        });
+        document.getElementById('C11').addEventListener('mouseover', function() {
+            showContent('C11');
+        });
+        document.getElementById('C12').addEventListener('mouseover', function() {
+            showContent('C12');
+        });
+        document.getElementById('C13').addEventListener('mouseover', function() {
+            showContent('C13');
+        });
+        document.getElementById('C14').addEventListener('mouseover', function() {
+            showContent('C14');
+        });
+        
+        document.body.addEventListener('mouseover', function(event) {
+            if (!event.target.matches('p a')) {
+                hideContent();
+            }
+        });
+    </script>
+
+
+
+</body>
+</html>

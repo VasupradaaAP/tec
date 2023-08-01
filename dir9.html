@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+table{
+
+    border:none;
+}
+td{
+    border:none;
+}
+td a{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+p a{
+    text-decoration: none;
+    margin-left: 100px;
+    color: black;
+    font-size: 35px;
+}
+#contentContainer {
+    display: flex;
+    align-items: center;
+}
+
+iframe {
+    display: none;
+    width: 700px;
+    height: 500px;
+    border: 2px solid black;
+    margin-left: 700px;
+    margin-top: -700px;
+    border-radius: 10px;
+}
+</style>
+</head> 
+
+<body>
+    <!-- <br><table border="1px" cellspacing=10px cellpadding=15px>
+    <tr><h2>
+        <td><a href="#C1">SKILLRACK</a></td>
+        <td><a href="#C2">LEETCODE</a></td>
+        <td><a href="#C3">HACKERRANK</a></td>
+        <td><a href="#C4">HACKEREARTH</a></td>
+        <td><a href="#C5">GEEKS FOR GEEKS</a></td>
+        <td><a href="#C6">CODE FORCES</a></td>
+        <td><a href="#C7">CODECHEF</a></td>
+    </h2></tr>
+        <tr><h2>
+        <td><a href="#C8">TOPCODER</a></td>
+        <td><a href="#C9">CODERBYTE</a></td>
+        <td><a href="#C10">CODEWARS</a></td>
+        <td><a href="#C11">FREE CODE CAMP</a></td>
+        <td><a href="#C12">CODE IN GAME</a></td>
+        <td><a href="#C13">BEECROWD</a></td>
+        <td><a href="#C14">MACHINE HACK</a></td>
+
+    </h2></tr>
+</table>-->
+<br><br>
+    <p id="C1"><a href="https://www.indiabix.com/">India bix</a></p>
+    <p id="C2"><a href="https://www.faceprep.in/tests/">face prep</a></p>
+    <p id="C3"><a href="https://testbook.com/objective-questions/mcq-on-quantitative-aptitude--5eea6a1039140f30f369e7e7">test book</a></p>
+    <p id="C4"><a href="https://www.placementpreparation.io/">placement</a></p>
+    <p id="C5"><a href="https://prepinsta.com/learn-aptitude/">prep insta</a></p>
+    <p id="C6"><a href="https://www.sawaal.com/">sawaal</a></p>
+    <p id="C7"><a href="https://www.fresherslive.com/online-test/aptitude-test/questions-and-answers">freshers live</a></p>
+    <p id="C8"><a href="https://www.aptitude-test.com/">aptitude test</a></p>
+    <p id="C9"><a href="https://www.practiceaptitudetests.com/">practise</a></p>
+    <p id="C10"><a href="https://mettl.com/aptitude-tests/">mettl</a></p>
+    <p id="C11"><a href="https://www.assessmentday.co.uk/">assessment</a></p>
+    <p id="C12"><a href="https://www.jobtestprep.co.uk/free-aptitude-test">job test</a></p>
+    <p id="C13"><a href="https://www.careerride.com/online-aptitude-test.aspx">carrer ride</a></p>
+    <p id="C14"><a href="https://www.examveda.com/mcq-question-on-arithmetic-ability/">exam veda</a></p>
+
+    <iframe id="contentFrame"> </iframe>
+
+    <script>
+        // Function to show content in iframe based on title hover
+        function showContent(title) {
+            var iframe = document.getElementById('contentFrame');
+            iframe.style.display = 'block';
+
+            // Mapping titles to their content
+            var contentMap = {
+    'C1': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">IndiaBix Aptitude Tests are a great way to evaluate your skills and knowledge across various domains. IndiaBix provides comprehensive aptitude tests to help you brush up on all the topics related to Quantitative, Logical Reasoning and Verbal Ability exercises.</h1>',
+    'C2': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">FACE Prep is one of India largest placement focused skill development company for job preparation. Learn & Practice Aptitude & Programming with us. Free Aptitude practice tests, Technical Practice tests on C, C++, Java, Python etc with solutions.</h1>',
+    'C3': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Free online test series & mock tests. The most trusted exam preparation site for competitive exams. Prepare for Exams like Banking, SSC, Railways, GATE, so on.</h1>',
+    'C4': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Placement Preparation platform is an initiative by GUVI to enhance your aptitude skills. We offer top content for placement exams & company-specific questions.</h1>',
+    'C5': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Learn and Master Aptitude for Placement with PrepInsta.</h1>',
+    'C6': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Learn and free practice for basic assessment on mental abilities aptitude & reasoning examples, topics with tricks to improve your skills.</h1>',
+    'C7': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Fresherslive Aptitude online test comprises easy as well as tough level questions of all the main topics which are to be asked in general aptitude.</h1>',
+    'C8': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Free practice Aptitude Tests giving you the best preparation for your employment aptitude test or school entrance exam.</h1>',
+    'C9': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Try 1000s of real aptitude tests, questions & answers written by experts. Practice FREE aptitude tests and get tips, guides and solutions.</h1>',
+    'C10': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">An aptitude test is an evaluation of a persons cognitive prowess and mental potential. It helps assess the individuals ability to perform, learn and succeed.</h1>',
+    'C11': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Practise using tests that are just like the real thing, so you are perfectly prepared for what you expect.</h1>',
+    'C12': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">FREE Practice aptitude tests online try employment aptitude test samples with 1000s of questions & answers with full walk-through by our experts.</h1>',
+    'C13': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Aptitude tutorials and practice test for placement and job interview. These Aptitude online practice tests are designed to help you to assess.</h1>',
+    'C14': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Discover new way to learn and practice MCQs for SSC, IBPS, Bank PO, Campus selection and other aptitude based exams.</h1>'
+
+
+};
+        iframe.contentDocument.body.innerHTML = contentMap[title];
+        }
+
+        
+        function hideContent() {
+            var iframe = document.getElementById('contentFrame');
+            iframe.style.display = 'none';
+        }
+
+       
+        document.getElementById('C1').addEventListener('mouseover', function() {
+            showContent('C1');
+        });
+        document.getElementById('C2').addEventListener('mouseover', function() {
+            showContent('C2');
+        });
+        document.getElementById('C3').addEventListener('mouseover', function() {
+            showContent('C3');
+        });
+        document.getElementById('C4').addEventListener('mouseover', function() {
+            showContent('C4');
+        });
+        document.getElementById('C5').addEventListener('mouseover', function() {
+            showContent('C5');
+        });
+        document.getElementById('C6').addEventListener('mouseover', function() {
+            showContent('C6');
+        });
+        document.getElementById('C7').addEventListener('mouseover', function() {
+            showContent('C7');
+        });
+        document.getElementById('C8').addEventListener('mouseover', function() {
+            showContent('C8');
+        });
+        document.getElementById('C9').addEventListener('mouseover', function() {
+            showContent('C9');
+        });
+        document.getElementById('C10').addEventListener('mouseover', function() {
+            showContent('C10');
+        });
+        document.getElementById('C11').addEventListener('mouseover', function() {
+            showContent('C11');
+        });
+        document.getElementById('C12').addEventListener('mouseover', function() {
+            showContent('C12');
+        });
+        document.getElementById('C13').addEventListener('mouseover', function() {
+            showContent('C13');
+        });
+        document.getElementById('C14').addEventListener('mouseover', function() {
+            showContent('C14');
+        });
+        
+        document.body.addEventListener('mouseover', function(event) {
+            if (!event.target.matches('p a')) {
+                hideContent();
+            }
+        });
+    </script>
+
+</body>
+</html>

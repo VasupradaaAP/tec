@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+table{
+
+    border:none;
+}
+td{
+    border:none;
+}
+td a{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+p a{
+    text-decoration: none;
+    margin-left: 100px;
+    color: black;
+    font-size: 35px;
+}
+#contentContainer {
+    display: flex;
+    align-items: center;
+}
+
+iframe {
+    display: none;
+    width: 700px;
+    height: 500px;
+    border: 2px solid black;
+    margin-left: 700px;
+    margin-top: -700px;
+    border-radius: 10px;
+}
+
+</style>
+</head> 
+
+<body>
+    <!-- <br><table border="1px" cellspacing=10px cellpadding=15px>
+    <tr><h2>
+        <td><a href="#C1">SKILLRACK</a></td>
+        <td><a href="#C2">LEETCODE</a></td>
+        <td><a href="#C3">HACKERRANK</a></td>
+        <td><a href="#C4">HACKEREARTH</a></td>
+        <td><a href="#C5">GEEKS FOR GEEKS</a></td>
+        <td><a href="#C6">CODE FORCES</a></td>
+        <td><a href="#C7">CODECHEF</a></td>
+    </h2></tr>
+        <tr><h2>
+        <td><a href="#C8">TOPCODER</a></td>
+        <td><a href="#C9">CODERBYTE</a></td>
+        <td><a href="#C10">CODEWARS</a></td>
+        <td><a href="#C11">FREE CODE CAMP</a></td>
+        <td><a href="#C12">CODE IN GAME</a></td>
+        <td><a href="#C13">BEECROWD</a></td>
+        <td><a href="#C14">MACHINE HACK</a></td>
+
+    </h2></tr>
+</table>-->
+<br><br>
+    <p id="C1"><a href="https://www.coursera.org/courses?query=free">coursera</a></p>
+    <p id="C2"><a href="https://www.udemy.com/courses/free/">udemy</a></p>
+    <p id="C3"><a href="https://www.w3schools.com/">w3 schools</a></p>
+    <p id="C4"><a href="https://www.mygreatlearning.com/academy">great learning</a></p>
+    <p id="C5"><a href="https://www.geeksforgeeks.org/free-online-courses-by-geeksforgeeks-learn-new-tech-skills/">geeks for geeks</a></p>
+    <p id="C6"><a href="https://www.cisco.com/c/en/us/training-events/training-certifications.html">cisco</a></p>
+    <p id="C7"><a href="https://swayam.gov.in/nc_details/NPTEL">NPTEL</a></p>
+    <p id="C8"><a href="https://www.udacity.com/">udacity</a></p>
+    <p id="C9"><a href="https://www.edx.org/">edX</a></p>
+    <p id="C10"><a href="https://www.khanacademy.org/">Khan academy</a></p>
+    <p id="C11"><a href="https://www.futurelearn.com/">future class</a></p>
+    <p id="C12"><a href="https://cognitiveclass.ai/">cognitive class</a></p>
+    <p id="C13"><a href="https://www.datacamp.com/">data camp</a></p>
+    <p id="C14"><a href="https://about.linkedin.com/coronavirus-resource-hub/online-courses">linkedIn learning</a></p>
+
+    <iframe id="contentFrame"> </iframe>
+
+    <script>
+        // Function to show content in iframe based on title hover
+        function showContent(title) {
+            var iframe = document.getElementById('contentFrame');
+            iframe.style.display = 'block';
+
+            // Mapping titles to their content
+            var contentMap = {
+    'C1': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Enabling you towards desired learning goal - courses in Business, Technology, Data Science. Online Courses from Top Institutions - Gain New Skills & Earn Certificate upon Completion. Learn On Any Device. Enrol Now! Earn a Certificate. Achieve Your Goals. 100% Online.</h1>',
+    'C2': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Free online courses teach millions of student 17,000+ of top courses design courses. Site is an online learning and teaching marketplace with over 185000 courses.</h1>',
+    'C3': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, Python, PHP, Bootstrap, etc.</h1>',
+    'C4': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Great Learning Academy offers free online certificate courses in various domains such as Data Science, AI, ML, IT & Software, Cloud Computing, Marketing, so on.</h1>',
+    'C5': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">GeeksforGeeks Interactive Live and Self-Paced Courses to help you enhance your programming. Practice problems and learn with live and online recorded classes.</h1>',
+    'C6': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Cisco training and certifications are recognized worldwide, preparing you for a range of tech roles and with hands-on experiences and online resources.</h1>',
+    'C7': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">NPTEL provides E-learning through online Web and Video courses various streams. 2400+ courses available for self study. Explore now!</h1>',
+    'C8': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Master real, in-demand tech skills from home with Udacity 100% online learning platform. Stay ahead of the curve and get the skills you will need for the jobs of the future.</h1>',
+    'C9': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Learn from MIT, Harvard, and the worlds top universities for free. Choose from 3,000+ courses in computer science, business, and more. Discover thousands of offerings from free courses to full degrees delivered by world class partners.</h1>',
+    'C10': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">It is all free for learners and teachers and tools to empower teachers. Khan Academy library is trusted and standard aligned practice</h1>',
+    'C11': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Starting learning for free with a wide range of free online courses covering different subjects. Discover free online learning from top universities.</h1>',
+    'C12': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">It provides Computer Science & Information Technology, Computer Vision, Data Analysis, Data Science, Data Visualization, Databases, Deep Learning, etc.</h1>',
+    'C13': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Learn the Data skills you need online at your own pace. Learn R, Python & Data Science with interactive exercises, short videos and no installation required.</h1>',
+    'C14': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Gain access to up-to-date content & expert-led courses, on-demand on both desktop & mobile. Get 24/7, unlimited access to over 16,000 business, design and tech online courses.</h1>'
+
+
+};
+        iframe.contentDocument.body.innerHTML = contentMap[title];
+        }
+
+        
+        function hideContent() {
+            var iframe = document.getElementById('contentFrame');
+            iframe.style.display = 'none';
+        }
+
+       
+        document.getElementById('C1').addEventListener('mouseover', function() {
+            showContent('C1');
+        });
+        document.getElementById('C2').addEventListener('mouseover', function() {
+            showContent('C2');
+        });
+        document.getElementById('C3').addEventListener('mouseover', function() {
+            showContent('C3');
+        });
+        document.getElementById('C4').addEventListener('mouseover', function() {
+            showContent('C4');
+        });
+        document.getElementById('C5').addEventListener('mouseover', function() {
+            showContent('C5');
+        });
+        document.getElementById('C6').addEventListener('mouseover', function() {
+            showContent('C6');
+        });
+        document.getElementById('C7').addEventListener('mouseover', function() {
+            showContent('C7');
+        });
+        document.getElementById('C8').addEventListener('mouseover', function() {
+            showContent('C8');
+        });
+        document.getElementById('C9').addEventListener('mouseover', function() {
+            showContent('C9');
+        });
+        document.getElementById('C10').addEventListener('mouseover', function() {
+            showContent('C10');
+        });
+        document.getElementById('C11').addEventListener('mouseover', function() {
+            showContent('C11');
+        });
+        document.getElementById('C12').addEventListener('mouseover', function() {
+            showContent('C12');
+        });
+        document.getElementById('C13').addEventListener('mouseover', function() {
+            showContent('C13');
+        });
+        document.getElementById('C14').addEventListener('mouseover', function() {
+            showContent('C14');
+        });
+        
+        document.body.addEventListener('mouseover', function(event) {
+            if (!event.target.matches('p a')) {
+                hideContent();
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+table{
+
+    border:none;
+}
+td{
+    border:none;
+}
+td a{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+p a{
+    text-decoration: none;
+    margin-left: 100px;
+    color: black;
+    font-size: 35px;
+}
+#contentContainer {
+    display: flex;
+    align-items: center;
+}
+
+iframe {
+    display: none;
+    width: 700px;
+    height: 500px;
+    border: 2px solid black;
+    margin-left: 700px;
+    margin-top: -700px;
+    border-radius: 10px;
+}
+</style>
+</head> 
+
+<body>
+    <!-- <br><table border="1px" cellspacing=10px cellpadding=15px>
+    <tr><h2>
+        <td><a href="#C1">SKILLRACK</a></td>
+        <td><a href="#C2">LEETCODE</a></td>
+        <td><a href="#C3">HACKERRANK</a></td>
+        <td><a href="#C4">HACKEREARTH</a></td>
+        <td><a href="#C5">GEEKS FOR GEEKS</a></td>
+        <td><a href="#C6">CODE FORCES</a></td>
+        <td><a href="#C7">CODECHEF</a></td>
+    </h2></tr>
+        <tr><h2>
+        <td><a href="#C8">TOPCODER</a></td>
+        <td><a href="#C9">CODERBYTE</a></td>
+        <td><a href="#C10">CODEWARS</a></td>
+        <td><a href="#C11">FREE CODE CAMP</a></td>
+        <td><a href="#C12">CODE IN GAME</a></td>
+        <td><a href="#C13">BEECROWD</a></td>
+        <td><a href="#C14">MACHINE HACK</a></td>
+
+    </h2></tr>
+</table>-->
+<br><br>
+    <p id="C1"><a href="">Java</a></p>
+    <p id="C2"><a href="">C</a></p>
+    <p id="C3"><a href="">C++</a></p>
+    <p id="C4"><a href="">Python</a></p>
+    <p id="C5"><a href="">HTML, CSS</a></p>
+    <p id="C6"><a href="">Javascript</a></p>
+    <p id="C7"><a href="">PHP</a></p>
+    <p id="C8"><a href="">Swift</a></p>
+    <p id="C9"><a href="">Kotlin</a></p>
+    <p id="C10"><a href="">SQL</a></p>
+    <p id="C11"><a href="">Objective-C</a></p>
+    <p id="C12"><a href="">C#</a></p>
+    <p id="C13"><a href="">Scala</a></p>
+    <p id="C14"><a href="">RUST</a></p>
+    <p id="C15"><a href="">Fortran</a></p>
+
+
+    <iframe id="contentFrame"> </iframe>
+
+    <script>
+        // Function to show content in iframe based on title hover
+        function showContent(title) {
+            var iframe = document.getElementById('contentFrame');
+            iframe.style.display = 'block';
+
+            // Mapping titles to their content
+            var contentMap = {
+    'C1': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Java is a multi-platform, object-oriented, and network-centric language that can be used as a platform in itself. It is a fast, secure, reliable programming language for coding everything from mobile apps and enterprise software to big data applications and server-side technologies.</h1>',
+    'C2': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">C language is considered as the mother language of all the modern programming languages because most of the compilers, JVMs, Kernels, etc. are written in C language, and most of the programming languages follow C syntax, for example, C++, Java, C#, etc.</h1>',
+    'C3': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">C++ is a cross-platform language that can be used to create high-performance applications. It is a extension of C language. C++ is an object-oriented programming language having some additional features like Encapsulation, Data Hiding, Data Abstraction, Inheritance, Polymorphism, etc.</h1>',
+    'C4': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python is dynamically typed and garbage-collected. Python is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis.</h1>',
+    'C5': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">HTML is used to structure the content on the web page and provides display information of various tags to the browser.<br><br> CSS is used to add style to the content of a web page and it CSS enhances that information by providing styling to those same HTML tags.</h1>',
+    'C6': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">JavaScript is a scripting language used to develop web pages. Developed in Netscape, JS allows developers to create a dynamic and interactive web page to interact with visitors and execute complex actions. It also enables users to load content into a document without reloading the entire page.</h1>',
+    'C7': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">PHP (PHP Hypertext Preprocessor) is a server-side scripting language that is used to create dynamic web pages that can interact with databases. It is a widely-used open source language that is specifically used for web application development and can be embedded within HTML.</h1>',
+    'C8': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Swift is a high-level general-purpose and multi-paradigm. It is robust and intuitive programming language created by Apple for building apps for iOS, Mac, Apple TV, and Apple Watch. It is designed to give developers more freedom than ever. Swift is easy to use and open source, so anyone with an idea can create something incredible.</h1>',
+    'C9': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Kotlin is a cross-platform, statically typed, general-purpose high-level programming language with type inference. Kotlin is designed to interoperate fully with Java, and the JVM version of Kotlin standard library depends on the Java class library.</h1>',
+    'C10': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">SQL (structured query language) is a language for specifying the organization of databases (collections of records). Databases organized with SQL are called relational, because SQL provides the ability to query a database for information that falls in a given relation.</h1>',
+    'C11': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Objective-C is a general-purpose, object-oriented programming language that adds Smalltalk-style messaging to the C programming language. This is the main programming language used by Apple for the OS X and iOS operating systems.</h1>',
+    'C12': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">C# is a general-purpose programming language, can be used to create a number of different programs and applications: mobile apps, desktop apps, cloud-based services, websites, enterprise software and games.</h1>',
+    'C13': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Scala is used in building modular, scalable, and fast software. It is most commonly used by data engineers along with Apache Spark to process large amounts of data smoothly and efficiently. Since Scala runs on JVM, Java and Scala stacks are seamlessly integrated.</h1>',
+    'C14': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Rust is a multi-paradigm, general-purpose programming language that emphasizes performance, type safety, and concurrency. It enforces memory safety ensuring that all references point to valid memory without requiring the use of a garbage collector.</h1>',
+    'C15': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Fortran is a general-purpose, compiled imperative programming language that is especially suited to numeric computation and scientific computing. It has been used for such projects as the design of bridges and aeroplane structures, it is used for factory automation control, for storm drainage design, analysis of scientific data and so on.</h1>'
+
+
+};
+        iframe.contentDocument.body.innerHTML = contentMap[title];
+        }
+
+        
+        function hideContent() {
+            var iframe = document.getElementById('contentFrame');
+            iframe.style.display = 'none';
+        }
+
+       
+        document.getElementById('C1').addEventListener('mouseover', function() {
+            showContent('C1');
+        });
+        document.getElementById('C2').addEventListener('mouseover', function() {
+            showContent('C2');
+        });
+        document.getElementById('C3').addEventListener('mouseover', function() {
+            showContent('C3');
+        });
+        document.getElementById('C4').addEventListener('mouseover', function() {
+            showContent('C4');
+        });
+        document.getElementById('C5').addEventListener('mouseover', function() {
+            showContent('C5');
+        });
+        document.getElementById('C6').addEventListener('mouseover', function() {
+            showContent('C6');
+        });
+        document.getElementById('C7').addEventListener('mouseover', function() {
+            showContent('C7');
+        });
+        document.getElementById('C8').addEventListener('mouseover', function() {
+            showContent('C8');
+        });
+        document.getElementById('C9').addEventListener('mouseover', function() {
+            showContent('C9');
+        });
+        document.getElementById('C10').addEventListener('mouseover', function() {
+            showContent('C10');
+        });
+        document.getElementById('C11').addEventListener('mouseover', function() {
+            showContent('C11');
+        });
+        document.getElementById('C12').addEventListener('mouseover', function() {
+            showContent('C12');
+        });
+        document.getElementById('C13').addEventListener('mouseover', function() {
+            showContent('C13');
+        });
+        document.getElementById('C14').addEventListener('mouseover', function() {
+            showContent('C14');
+        });
+        document.getElementById('C15').addEventListener('mouseover', function() {
+            showContent('C15');
+        });
+        
+        document.body.addEventListener('mouseover', function(event) {
+            if (!event.target.matches('p a')) {
+                hideContent();
+            }
+        });
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+table{
+
+    border:none;
+}
+td{
+    border:none;
+}
+td a{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+p a{
+    text-decoration: none;
+    margin-left: 100px;
+    color: black;
+    font-size: 35px;
+}
+
+#contentContainer {
+    display: flex;
+    align-items: center;
+}
+
+iframe {
+    display: none;
+    width: 700px;
+    height: 500px;
+    border: 2px solid black;
+    margin-left: 700px;
+    margin-top: -700px;
+    border-radius: 10px;
+}
+</style>
+</head> 
+
+<body>
+    <!-- <br><table border="1px" cellspacing=10px cellpadding=15px>
+    <tr><h2>
+        <td><a href="#C1">SKILLRACK</a></td>
+        <td><a href="#C2">LEETCODE</a></td>
+        <td><a href="#C3">HACKERRANK</a></td>
+        <td><a href="#C4">HACKEREARTH</a></td>
+        <td><a href="#C5">GEEKS FOR GEEKS</a></td>
+        <td><a href="#C6">CODE FORCES</a></td>
+        <td><a href="#C7">CODECHEF</a></td>
+    </h2></tr>
+        <tr><h2>
+        <td><a href="#C8">TOPCODER</a></td>
+        <td><a href="#C9">CODERBYTE</a></td>
+        <td><a href="#C10">CODEWARS</a></td>
+        <td><a href="#C11">FREE CODE CAMP</a></td>
+        <td><a href="#C12">CODE IN GAME</a></td>
+        <td><a href="#C13">BEECROWD</a></td>
+        <td><a href="#C14">MACHINE HACK</a></td>
+
+    </h2></tr>
+</table>-->
+<br><br>
+    <p id="C1"><a href="https://www.python.org/downloads/">python</a></p>
+    <p id="C2"><a href="https://www.java.com/en/download/manual.jsp">java</a></p>
+    <p id="C3"><a href="https://netbeans.apache.org/">net beans</a></p>
+    <p id="C4"><a href="https://www.bloodshed.net/">Dev C++</a></p>
+    <p id="C5"><a href="https://code.visualstudio.com/">visual studio</a></p>
+    <p id="C6"><a href="https://developer.android.com/studio?gclid=CjwKCAjwzo2mBhAUEiwAf7wjkt-_pfXnPrs_TejngS-1JiyLKZ9YnnsxPYt8ZhZ-oycdt7_5FESkRBoCqNQQAvD_BwE&gclsrc=aw.ds">android studio</a></p>
+    <p id="C7"><a href="https://www.mathworks.com/products/matlab.html">matlab</a></p>
+    <p id="C8"><a href="https://angular.io/">angular</a></p>
+    <p id="C9"><a href="https://www.php.net/downloads.php">php</a></p>
+    <p id="C10"><a href="https://notepad-plus-plus.org/downloads/">notepad ++</a></p>
+    <p id="C11"><a href="https://brackets.io/">brackets</a></p>
+    <p id="C12"><a href="https://macromates.com/">macromates</a></p>
+    <p id="C13"><a href="https://bluefish.openoffice.nl/download.html">bluefish</a></p>
+    <p id="C14"><a href="https://atom.en.softonic.com/">atom</a></p>
+
+    <iframe id="contentFrame"> </iframe>
+
+    <script>
+        // Function to show content in iframe based on title hover
+        function showContent(title) {
+            var iframe = document.getElementById('contentFrame');
+            iframe.style.display = 'block';
+
+            // Mapping titles to their content
+            var contentMap = {
+    'C1': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Download the latest version of Python. Download Python 3.11.4. Looking for Python with a different OS? Python for Windows, Linux/UNIX, macOS, Other.</h1>',
+    'C2': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Download or update your existing Java Runtime Environment (JRE, Java Runtime), also known as the Java plug-in (plugin), Java Virtual Machine </h1>',
+    'C3': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">NetBeans IDE lets you quickly and easily develop Java desktop, mobile, and web applications, as well as HTML5 applications with HTML, JavaScript, and CSS.</h1>',
+    'C4': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Download Dev-C++ for free. A free, portable, fast and simple C/C++ IDE. A new and improved fork of Bloodshed Dev-C++.</h1>',
+    'C5': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">A free, fully featured, and extensible solution for individual developers to create applications for Android, iOS, Windows, and the web.</h1>',
+    'C6': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Get the official Integrated Development Environment (IDE) for Android app development. Get early access to new features in a well-tested build of Android Studio.</h1>',
+    'C7': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">The official home of MATLAB software. MATLAB is the easiest and most productive software environment for engineers and scientists.</h1>',
+    'C8': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Angular is a platform for building mobile and desktop web applications. The Angular Framework, Angular CLI, and components used by Angular applications are packaged as npm packages and distributed using the npm registry.</h1>',
+    'C9': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;"> Download PHP - PHP is a widely-used general-purpose scripting language that is especially suited for Web development and can be embedded.</h1>',
+    'C10': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Notepad++ is completely free open-source software for both personal and professional use. To be exact, the program is distributed under the terms of the GPLv3 license.</h1>',
+    'C11': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Brackets is a lightweight, yet powerful, modern text editor. We blend visual tools into the editor so you get the right amount of help when you want it</h1>',
+    'C12': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Powerful and customizable text editor with support for a huge list of programming languages and developed as open source.</h1>',
+    'C13': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">BlueFish is a free and open source text editor supporting a wide range of languages, multiple document interface, powerful search tools, in-line checking and auto-recovery, and other features.</h1>',
+    'C14': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Atom is free to download and runs on Linux, OS X and Windows with support for plug-ins written in Node and offering a range of packages and themes.</h1>'
+
+
+};
+        iframe.contentDocument.body.innerHTML = contentMap[title];
+        }
+
+        
+        function hideContent() {
+            var iframe = document.getElementById('contentFrame');
+            iframe.style.display = 'none';
+        }
+
+       
+        document.getElementById('C1').addEventListener('mouseover', function() {
+            showContent('C1');
+        });
+        document.getElementById('C2').addEventListener('mouseover', function() {
+            showContent('C2');
+        });
+        document.getElementById('C3').addEventListener('mouseover', function() {
+            showContent('C3');
+        });
+        document.getElementById('C4').addEventListener('mouseover', function() {
+            showContent('C4');
+        });
+        document.getElementById('C5').addEventListener('mouseover', function() {
+            showContent('C5');
+        });
+        document.getElementById('C6').addEventListener('mouseover', function() {
+            showContent('C6');
+        });
+        document.getElementById('C7').addEventListener('mouseover', function() {
+            showContent('C7');
+        });
+        document.getElementById('C8').addEventListener('mouseover', function() {
+            showContent('C8');
+        });
+        document.getElementById('C9').addEventListener('mouseover', function() {
+            showContent('C9');
+        });
+        document.getElementById('C10').addEventListener('mouseover', function() {
+            showContent('C10');
+        });
+        document.getElementById('C11').addEventListener('mouseover', function() {
+            showContent('C11');
+        });
+        document.getElementById('C12').addEventListener('mouseover', function() {
+            showContent('C12');
+        });
+        document.getElementById('C13').addEventListener('mouseover', function() {
+            showContent('C13');
+        });
+        document.getElementById('C14').addEventListener('mouseover', function() {
+            showContent('C14');
+        });
+        
+        document.body.addEventListener('mouseover', function(event) {
+            if (!event.target.matches('p a')) {
+                hideContent();
+            }
+        });
+    </script>
+
+
+</body>
+</html>

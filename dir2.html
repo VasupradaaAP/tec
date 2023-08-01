@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+table{
+
+    border:none;
+}
+td{
+    border:none;
+}
+td a{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+p a{
+    text-decoration: none;
+    margin-left: 100px;
+    color: black;
+    font-size: 35px;
+}
+
+#contentContainer {
+    display: flex;
+    align-items: center;
+}
+
+iframe {
+    display: none;
+    width: 700px;
+    height: 500px;
+    border: 2px solid black;
+    margin-left: 700px;
+    margin-top: -700px;
+    border-radius: 10px;
+}
+</style>
+</head> 
+
+<body>
+    <!-- <br><table border="1px" cellspacing=10px cellpadding=15px>
+    <tr><h2>
+        <td><a href="#C1"></a></td>
+        <td><a href="#C2"></a></td>
+        <td><a href="#C3"></a></td>
+        <td><a href="#C4"></a></td>
+        <td><a href="#C5"></a></td>
+        <td><a href="#C6"></a></td>
+        <td><a href="#C7"></a></td>
+    </h2></tr>
+        <tr><h2>
+        <td><a href="#C8"></a></td>
+        <td><a href="#C9"></a></td>
+        <td><a href="#C10"></a></td>
+        <td><a href="#C11"></a></td>
+        <td><a href="#C12"></a></td>
+        <td><a href="#C13"></a></td>
+        <td><a href="#C14"></a></td>
+
+    </h2></tr>
+</table>-->
+<br><br>
+    <p id="C1"><a href="https://www.programiz.com/c-programming/online-compiler/">programiz</a></p>
+    <p id="C2"><a href="https://www.onlinegdb.com/online_c_compiler">onlinegbd</a></p>
+    <p id="C3"><a href="https://www.codingninjas.com/studio/online-compiler">coding ninja</a></p>
+    <p id="C4"><a href="https://www.tutorialspoint.com/compile_c_online.php">tutorialpoint</a></p>
+    <p id="C5"><a href="https://onecompiler.com/c">one compiler</a></p>
+    <p id="C6"><a href="https://ideone.com/">ide one</a></p>
+    <p id="C7"><a href="https://www.w3schools.com/c/c_compiler.php">w3 schools</a></p>
+    <p id="C8"><a href="https://www.codechef.com/ide">code chef</a></p>
+    <p id="C9"><a href="https://www.jdoodle.com/c-online-compiler/">jdoodle</a></p>
+    <p id="C10"><a href="https://techiedelight.com/compiler/">tech light</a></p>
+    <p id="C11"><a href="https://prepinsta.com/online-compiler/">prep insta</a></p>
+    <p id="C12"><a href="https://codedamn.com/online-compiler">code damn</a></p>
+    <p id="C13"><a href="https://qa-mktg.codingrooms.com/compiler/c/">coding rooms</a></p>
+    <p id="C14"><a href="https://www.guvi.in/ide">guvi</a></p>
+
+    <iframe id="contentFrame"> </iframe>
+
+    <script>
+        // Function to show content in iframe based on title hover
+        function showContent(title) {
+            var iframe = document.getElementById('contentFrame');
+            iframe.style.display = 'block';
+
+            // Mapping titles to their content
+            var contentMap = {
+'C1': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Learn to code in Python, C/C++, Java, and other popular programming languages with our easy to follow tutorials, examples, online compiler and references.</h1>',
+'C2': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Online GDB is online compiler and debugger for C/C++. You can compile, run and debug code with gdb online. Using gcc/g++ as compiler and gdb as debugge</h1>',
+'C3': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">It offers free courses that will provide access to videos, assignments, and problems; doubt support; and a free trial completion certificate.</h1>',
+'C4': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Explore our 7000+ courses, 5000+ eBooks, 150+ Technologies, 1600+ Global Instructors. Learn Programming, IT Networking, Data Science, AI ML, Cyber Security and Marketing</h1>',
+'C5': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">One single place for students/ employees collaboration · Create org with your college or with your company and create teams for classrooms or projects. </h1>',
+'C6': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Ideone is an online compiler and debugging tool which allows you to compile source code and execute it online in more than 60 programming languages.</h1>',
+'C7': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning. It includes tutorials and references.</h1>',
+'C8': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">CodeChef is an excellent platform that offers a wide range of practice questions and conducts exceptional contests.</h1>',
+'C9': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">It is a free Online Compiler, Editor, IDE for Java, C, C++, PHP, Perl, Python, Ruby. Code Online - Share Save Java/C/C++/Perl/Python/Ruby online.</h1>',
+'C10': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Compile and execute code online in C, C++, Java, Python, PHP, Javascript, Kotlin, Swift, C#, Go, Pascal, Ruby, etc with our online compiler.</h1>',
+'C11': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">This is an Online Compiler powered by PrepInsta. Students can use this compiler to compile their codes of C, C++, Java , Python etc.</h1>',
+'C12': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Our mission is to help you become great programmer. Learn coding through hundreds of coding courses, thousands of practice problems and hands-on projects.</h1>',
+'C13': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">The Coding Rooms IDE is a powerful, easy to use, browser-based development environment. Code runs on a robust Linux instance</h1>',
+'C14': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Free Online Compiler to run your programs online. It support more than 20+ on demand programming languages. BASH, BASIC, C, CLOJURE, CRYSTAL, C++, C#, etc.</h1>',
+
+};
+        iframe.contentDocument.body.innerHTML = contentMap[title];
+        }
+
+        
+        function hideContent() {
+            var iframe = document.getElementById('contentFrame');
+            iframe.style.display = 'none';
+        }
+
+       
+        document.getElementById('C1').addEventListener('mouseover', function() {
+            showContent('C1');
+        });
+        document.getElementById('C2').addEventListener('mouseover', function() {
+            showContent('C2');
+        });
+        document.getElementById('C3').addEventListener('mouseover', function() {
+            showContent('C3');
+        });
+        document.getElementById('C4').addEventListener('mouseover', function() {
+            showContent('C4');
+        });
+        document.getElementById('C5').addEventListener('mouseover', function() {
+            showContent('C5');
+        });
+        document.getElementById('C6').addEventListener('mouseover', function() {
+            showContent('C6');
+        });
+        document.getElementById('C7').addEventListener('mouseover', function() {
+            showContent('C7');
+        });
+        document.getElementById('C8').addEventListener('mouseover', function() {
+            showContent('C8');
+        });
+        document.getElementById('C9').addEventListener('mouseover', function() {
+            showContent('C9');
+        });
+        document.getElementById('C10').addEventListener('mouseover', function() {
+            showContent('C10');
+        });
+        document.getElementById('C11').addEventListener('mouseover', function() {
+            showContent('C11');
+        });
+        document.getElementById('C12').addEventListener('mouseover', function() {
+            showContent('C12');
+        });
+        document.getElementById('C13').addEventListener('mouseover', function() {
+            showContent('C13');
+        });
+        document.getElementById('C14').addEventListener('mouseover', function() {
+            showContent('C14');
+        });
+        
+        document.body.addEventListener('mouseover', function(event) {
+            if (!event.target.matches('p a')) {
+                hideContent();
+            }
+        });
+    </script>
+
+</body>
+</html>

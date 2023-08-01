@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+table{
+
+    border:none;
+}
+td{
+    border:none;
+}
+td a{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+p a{
+    text-decoration: none;
+    margin-left: 100px;
+    color: black;
+    font-size: 35px;
+}
+#contentContainer {
+    display: flex;
+    align-items: center;
+}
+
+iframe {
+    display: none;
+    width: 700px;
+    height: 500px;
+    border: 2px solid black;
+    margin-left: 700px;
+    margin-top: -300px;
+    border-radius: 10px;
+}
+
+</style>
+</head> 
+
+<body>
+    <!-- <br><table border="1px" cellspacing=10px cellpadding=15px>
+    <tr><h2>
+        <td><a href="#C1">SKILLRACK</a></td>
+        <td><a href="#C2">LEETCODE</a></td>
+        <td><a href="#C3">HACKERRANK</a></td>
+        <td><a href="#C4">HACKEREARTH</a></td>
+        <td><a href="#C5">GEEKS FOR GEEKS</a></td>
+        <td><a href="#C6">CODE FORCES</a></td>
+        <td><a href="#C7">CODECHEF</a></td>
+    </h2></tr>
+        <tr><h2>
+        <td><a href="#C8">TOPCODER</a></td>
+        <td><a href="#C9">CODERBYTE</a></td>
+        <td><a href="#C10">CODEWARS</a></td>
+        <td><a href="#C11">FREE CODE CAMP</a></td>
+        <td><a href="#C12">CODE IN GAME</a></td>
+        <td><a href="#C13">BEECROWD</a></td>
+        <td><a href="#C14">MACHINE HACK</a></td>
+
+    </h2></tr>
+</table>-->
+<br><br>
+    <p id="C1"><a href="https://gate.iitk.ac.in/">GATE</a></p>
+    <p id="C2"><a href="https://www.isro.gov.in/Careers.html">ISRO</a></p>
+    <p id="C3"><a href="https://www.drdo.gov.in/careers">DRDO</a></p>
+    <p id="C4"><a href="https://ssc.nic.in/">SSC</a></p>
+    <p id="C5"><a href="https://www.upsc.gov.in/">UPSC IES</a></p>
+    <p id="C6"><a href="https://www.rrbcdg.gov.in/">RRB JE IT</a></p>
+    <p id="C7"><a href="https://afcat.cdac.in/AFCAT/">AFCAT</a></p>
+    
+
+
+    <iframe id="contentFrame"> </iframe>
+
+    <script>
+        // Function to show content in iframe based on title hover
+        function showContent(title) {
+            var iframe = document.getElementById('contentFrame');
+            iframe.style.display = 'block';
+
+            // Mapping titles to their content
+            var contentMap = {
+    'C1': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">The Graduate Aptitude Test in Engineering is an entrance examination conducted in India that primarily tests the comprehensive understanding of undergraduate subjects in engineering and sciences for admission into technical postgraduate programs.<br><br>It is also an entery key for joining in PSU (Public Sector Undertaking) companies.</h1>',
+    'C2': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">The Indian Space Research Organisation, commonly referred to as ISRO, is the national space agency of India. It operates under the Department of Space which is directly overseen by the Prime Minister of India.</h1>',
+    'C3': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">The Defence Research and Development Organisation is the premier agency under the Department of Defence Research and Development in Ministry of Defence of the Government of India, charged with the military research and development, headquartered in Delhi, India.</h1>',
+    'C4': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Combined Graduated Level Examination is an examination conducted by the Staff Selection Commission to recruit Group B and C officers to various posts in top ministries, departments and organisations of the Government of India.</h1>',
+    'C5': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">Indian Engineering Services (IES) is a top-level exam conducted by UPSC to meet the technical and managerial functions of Government of India. The Union Public Service Commission (UPSC) is India central agency authorized to conduct this examination.</h1>',
+    'C6': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">RRB JE is a Central Government Examination conducted for filling various vacancies of technical profile in the Indian Railways like Junior Engineer (IT), Junior Engineer (JE), Chemical Material Superintendent (DMS), and Chemical and Metallurgical Assistant (CMA).</h1>',
+    'C7': '<h1 style="font-size: 27px;color:blue; text-align:justify;margin-left:30px;margin-right:30px;margin-top:25px;">AFCAT is a section for the candidates who wish to join the Indian Air Force for both Short Service Commission in Flying Branch and Permanent Commission/Short Service in Ground Duties for both Technical and Non-Technical occupations.</h1>'
+    
+};
+
+        iframe.contentDocument.body.innerHTML = contentMap[title];
+        }
+
+        
+        function hideContent() {
+            var iframe = document.getElementById('contentFrame');
+            iframe.style.display = 'none';
+        }
+
+       
+        document.getElementById('C1').addEventListener('mouseover', function() {
+            showContent('C1');
+        });
+        document.getElementById('C2').addEventListener('mouseover', function() {
+            showContent('C2');
+        });
+        document.getElementById('C3').addEventListener('mouseover', function() {
+            showContent('C3');
+        });
+        document.getElementById('C4').addEventListener('mouseover', function() {
+            showContent('C4');
+        });
+        document.getElementById('C5').addEventListener('mouseover', function() {
+            showContent('C5');
+        });
+        document.getElementById('C6').addEventListener('mouseover', function() {
+            showContent('C6');
+        });
+        document.getElementById('C7').addEventListener('mouseover', function() {
+            showContent('C7');
+        });
+       
+        document.body.addEventListener('mouseover', function(event) {
+            if (!event.target.matches('p a')) {
+                hideContent();
+            }
+        });
+    </script>
+</body>
+</html>
